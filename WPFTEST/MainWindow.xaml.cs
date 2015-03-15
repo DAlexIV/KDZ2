@@ -26,15 +26,24 @@ namespace WPFTEST
     public partial class MainWindow : Window
     {
         CinemaList cl;
+        private int prevarea;
+        private int prevdist; 
         public MainWindow()
         {
             InitializeComponent();
-
-
         }
         private void OpenFileHandler(object obj, EventArgs e)
         {
-            string path = MYIO.OpenCSV();
+            string path = null;
+            try
+            {
+                path = MYIO.OpenCSV();
+            }
+            catch (FileLoadException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
             List<string> rawdata = MYIO.ReadCSV(path);
             cl = new CinemaList(datagr, rawdata);
             cl.ConstructColumns();
@@ -43,10 +52,14 @@ namespace WPFTEST
             bar.Value = bar.Maximum;
             tb.Text = ((int)bar.Value).ToString();
             datagr.ItemsSource = cl.GetData;
+            comboar.ItemsSource = cl.GetAreas;
+            combodist.ItemsSource = cl.GetDistricts;
             //Bind to datagrid            
             UnlockAll();
+            SetDefCombo();
+
         }
-        
+
         private void SaveToNewFileHandler(object obj, EventArgs e)
         {
             cl.SortData();
@@ -61,7 +74,7 @@ namespace WPFTEST
             if (path != null)
                 MYIO.AppendToFile(cl.GetDefLine, cl.GetData, path);
         }
-        
+
 
         private void bar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -69,7 +82,7 @@ namespace WPFTEST
             cl.SortData();
             cl.ResizeData((int)bar.Value);
             cl.UpdateData();
-            combo.ItemsSource = cl.GetAreas;
+            tb.Text = ((int)bar.Value).ToString();
         }
 
         private void TextBox_TextEntered(object sender, RoutedEventArgs e)
@@ -80,14 +93,14 @@ namespace WPFTEST
                 MessageBox.Show("Please, enter a number!");
                 return;
             }
-            if (curn < 0)
+            if (curn <= 0)
             {
                 MessageBox.Show("Please, enter a positive number!");
                 return;
             }
             if (curn > (int)bar.Maximum)
             {
-                MessageBox.Show("Please, enter a number that is lower than N - " + (int)bar.Maximum);
+                MessageBox.Show("Please, enter a number that is lower than" + (int)bar.Maximum);
                 return;
             }
             bar.Value = curn;
@@ -95,15 +108,67 @@ namespace WPFTEST
         }
         private void UnlockAll()
         {
-            button.Visibility = Visibility.Visible;
-            bar.Visibility = Visibility.Visible;
-            tb.Visibility = Visibility.Visible;
+            button.IsEnabled = true;
+            bar.IsEnabled = true;
+            comboar.IsEnabled = true;
+            combodist.IsEnabled = true;
+            sv.IsEnabled = true;
+            ap.IsEnabled = true;
         }
 
-        private void SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void SelectionChangedAr(object sender, SelectionChangedEventArgs e)
         {
-            cl.area_filter = combo.SelectedItem.ToString();
-            cl.UpdateData();
+            if (comboar.SelectedValue.ToString() != null)
+                cl.area_filter = comboar.SelectedValue.ToString();
+            else
+                MessageBox.Show("Dat shit is null :C");
+            try
+            {
+                cl.UpdateData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                comboar.SelectedIndex = prevarea;
+            }
+            bar.Maximum = cl.GetDatasize;
+            bar.Value = cl.GetDatasize;
+            prevarea = comboar.SelectedIndex;
+
+        }
+        private void SelectionChangedDst(object sender, SelectionChangedEventArgs e)
+        {
+            if (combodist.SelectedValue.ToString() != null)
+                cl.dist_filter = combodist.SelectedValue.ToString();
+            else
+                MessageBox.Show("Dat shit is null :C");
+            try
+            {
+                cl.UpdateData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                combodist.SelectedIndex = prevdist;
+            }
+            bar.Maximum = cl.GetDatasize;
+            bar.Value = cl.GetDatasize;
+            prevdist = comboar.SelectedIndex;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            cl.SetToDef();
+            SetDefCombo();
+            bar.Maximum = cl.GetMaxSize;
+            bar.Value = cl.GetMaxSize;
+        }
+        private void SetDefCombo()
+        {
+            comboar.SelectedIndex = 0;
+            combodist.SelectedIndex = 0;
+            prevarea = 0;
+            prevdist = 0;
         }
     }
 }
