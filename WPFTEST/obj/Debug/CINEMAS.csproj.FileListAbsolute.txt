@@ -1,0 +1,34 @@
+C:\Study\C#\WPFTEST\WPFTEST\bin\Debug\WPFTEST.exe.config
+C:\Study\C#\WPFTEST\WPFTEST\bin\Debug\WPFTEST.exe
+C:\Study\C#\WPFTEST\WPFTEST\bin\Debug\WPFTEST.pdb
+C:\Study\C#\WPFTEST\WPFTEST\bin\Debug\Cinema.dll
+C:\Study\C#\WPFTEST\WPFTEST\bin\Debug\Cinema.pdb
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\MainWindow.baml
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\MainWindow.g.cs
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\App.g.cs
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\WPFTEST_MarkupCompile.cache
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\WPFTEST.g.resources
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\WPFTEST.Properties.Resources.resources
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\CINEMAS.csproj.GenerateResource.Cache
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\WPFTEST.exe
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\WPFTEST.pdb
+C:\Study\C#\WPFTEST\WPFTEST\obj\Debug\CINEMAS.csprojResolveAssemblyReference.cache
+C:\Study\C#\WPFTEST\WPFTEST\bin\Debug\FileIO.dll
+C:\Study\C#\WPFTEST\WPFTEST\bin\Debug\FileIO.pdb
+C:\Study\C#\WPFTEST - Copy\WPFTEST\bin\Debug\WPFTEST.exe.config
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\WPFTEST.exe
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\WPFTEST.pdb
+C:\Study\C#\WPFTEST - Copy\WPFTEST\bin\Debug\WPFTEST.exe
+C:\Study\C#\WPFTEST - Copy\WPFTEST\bin\Debug\WPFTEST.pdb
+C:\Study\C#\WPFTEST - Copy\WPFTEST\bin\Debug\Cinema.dll
+C:\Study\C#\WPFTEST - Copy\WPFTEST\bin\Debug\FileIO.dll
+C:\Study\C#\WPFTEST - Copy\WPFTEST\bin\Debug\Cinema.pdb
+C:\Study\C#\WPFTEST - Copy\WPFTEST\bin\Debug\FileIO.pdb
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\CINEMAS.csprojResolveAssemblyReference.cache
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\MainWindow.baml
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\MainWindow.g.cs
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\App.g.cs
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\WPFTEST_MarkupCompile.cache
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\WPFTEST.g.resources
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\WPFTEST.Properties.Resources.resources
+C:\Study\C#\WPFTEST - Copy\WPFTEST\obj\Debug\CINEMAS.csproj.GenerateResource.Cache

@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPFTEST.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid>
+        <Menu HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="50">
+            <MenuItem Header="File" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="50" FontSize="16">
+                <MenuItem Header="New"/>
+                <MenuItem Header="Open" Click="OpenFileHandler"/>
+                <MenuItem Header="Save" Click="SaveToNewFileHandler"/>
+                <MenuItem Header="Append" Click="AppendFileHandler"/>
+                <Separator/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="datagr" HorizontalAlignment="Stretch"  Margin="0,30,0,0" VerticalAlignment="Stretch" 
+         AutoGenerateColumns="False" CanUserAddRows="False" CanUserSortColumns="True" Visibility="Visible"/>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Button x:Name ="button" Margin="-261,0,169,45" Click="TextBox_TextEntered" Visibility="Hidden" >
+                <TextBlock Text="Change number of elements" Width="150"></TextBlock>
+            </Button>
+            <ScrollBar x:Name="bar" Margin="0,-45,45,0" VerticalAlignment="Top" RenderTransformOrigin="0.478,0.489" 
+                       Height="120" Width="30" HorizontalAlignment="Right" ValueChanged="bar_ValueChanged"
+                       Visibility="Hidden">
+                <ScrollBar.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90"/>
+                        <TranslateTransform X="-0.66" Y="1.98"/>
+                    </TransformGroup>
+                </ScrollBar.RenderTransform>
+            </ScrollBar>
+            <TextBox x:Name="tb" HorizontalAlignment="Left" Height="30" Margin="-94,0,0,0" TextWrapping="Wrap" 
+                     Text="0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="-0.267,0.456" 
+                     FontSize="16" TextAlignment="Right" Visibility="Hidden"/>
+        </Grid>
+        <ComboBox x:Name="combo" HorizontalAlignment="Left" Margin="189,0,0,0" VerticalAlignment="Top" Width="129" Height="30" SelectionChanged="SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="86,0,0,0"  TextAlignment="Center" TextWrapping="Wrap" Text="Filter by area" VerticalAlignment="Top" Width="103" FontSize="16"/>
+    </Grid>
+
+
+</Window>

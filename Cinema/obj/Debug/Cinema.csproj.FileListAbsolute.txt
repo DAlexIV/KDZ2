@@ -1,0 +1,10 @@
+C:\Study\C#\WPFTEST\Cinema\bin\Debug\Cinema.dll
+C:\Study\C#\WPFTEST\Cinema\bin\Debug\Cinema.pdb
+C:\Study\C#\WPFTEST\Cinema\obj\Debug\Cinema.csprojResolveAssemblyReference.cache
+C:\Study\C#\WPFTEST\Cinema\obj\Debug\Cinema.dll
+C:\Study\C#\WPFTEST\Cinema\obj\Debug\Cinema.pdb
+C:\Study\C#\WPFTEST - Copy\Cinema\bin\Debug\Cinema.dll
+C:\Study\C#\WPFTEST - Copy\Cinema\bin\Debug\Cinema.pdb
+C:\Study\C#\WPFTEST - Copy\Cinema\obj\Debug\Cinema.csprojResolveAssemblyReference.cache
+C:\Study\C#\WPFTEST - Copy\Cinema\obj\Debug\Cinema.dll
+C:\Study\C#\WPFTEST - Copy\Cinema\obj\Debug\Cinema.pdb

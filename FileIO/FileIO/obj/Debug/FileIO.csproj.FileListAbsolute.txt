@@ -1,0 +1,12 @@
+C:\Study\C#\WPFTEST\FileIO\FileIO\obj\Debug\FileIO.csprojResolveAssemblyReference.cache
+C:\Study\C#\WPFTEST\FileIO\FileIO\bin\Debug\FileIO.dll
+C:\Study\C#\WPFTEST\FileIO\FileIO\bin\Debug\FileIO.pdb
+C:\Study\C#\WPFTEST\FileIO\FileIO\obj\Debug\FileIO.dll
+C:\Study\C#\WPFTEST\FileIO\FileIO\obj\Debug\FileIO.pdb
+C:\Study\C#\WPFTEST - Copy\FileIO\FileIO\bin\Debug\FileIO.dll
+C:\Study\C#\WPFTEST - Copy\FileIO\FileIO\bin\Debug\FileIO.pdb
+C:\Study\C#\WPFTEST - Copy\FileIO\FileIO\bin\Debug\Cinema.dll
+C:\Study\C#\WPFTEST - Copy\FileIO\FileIO\bin\Debug\Cinema.pdb
+C:\Study\C#\WPFTEST - Copy\FileIO\FileIO\obj\Debug\FileIO.csprojResolveAssemblyReference.cache
+C:\Study\C#\WPFTEST - Copy\FileIO\FileIO\obj\Debug\FileIO.dll
+C:\Study\C#\WPFTEST - Copy\FileIO\FileIO\obj\Debug\FileIO.pdb
