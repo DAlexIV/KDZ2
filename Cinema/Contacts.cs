@@ -8,10 +8,17 @@ namespace Cinema
 {
     class Contacts
     {
-        string[] cont;
+        private string[] _cont;
+        public string[] GetCont
+        {
+            get
+            {
+                return _cont;
+            }
+        }
         public Contacts(List<string> stck)
         {   
-            cont = stck.ToArray();
+            _cont = stck.ToArray();
         }
 
     }

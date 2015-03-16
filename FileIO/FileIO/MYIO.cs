@@ -10,6 +10,10 @@ namespace FileIO
 {
     public static class MYIO
     {
+        /// <summary>
+        /// Opens csv-file
+        /// </summary>
+        /// <returns>Path to file</returns>
         public static string OpenCSV()
         {
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
@@ -27,6 +31,11 @@ namespace FileIO
                 throw new FileLoadException("File wasn't opened!");
 
         }
+        /// <summary>
+        /// Reads data from csv-file
+        /// </summary>
+        /// <param name="path"> Path for reading </param>
+        /// <returns> Collection of lines</returns>
         public static List<string> ReadCSV(string path)
         {
             StreamReader file = new StreamReader(path);
@@ -35,6 +44,10 @@ namespace FileIO
                 rdedstring.Add(file.ReadLine());
             return rdedstring;
         }
+        /// <summary>
+        /// Saves csv-file
+        /// </summary>
+        /// <returns> Path for saving </returns>
         public static string SaveCSV()
         {
             // Configure save file dialog box
@@ -58,24 +71,50 @@ namespace FileIO
                 return null;
             }
         }
+        /// <summary>
+        /// Writes data and header to file
+        /// </summary>
+        /// <param name="header"> First line </param>
+        /// <param name="data"> All other lines </param>
+        /// <param name="path"> Path to write </param>
         public static void WriteToFile(string header, List<Theatre> data, string path)
         {
             string[] lines = ParseDateToStringArray(header, data);
             File.WriteAllLines(path, lines, Encoding.UTF8);
         }
+        /// <summary>
+        /// Appends data and header to file
+        /// </summary>
+        /// <param name="header"> Header line </param>
+        /// <param name="data"> Data lines </param>
+        /// <param name="path"> Path to write </param>
         public static void AppendToFile(string header, List<Theatre> data, string path)
         {
             string[] lines = ParseDateToStringArray(header, data);
             if (!File.Exists(path))
-                MessageBox.Show("File not found, WTF?");
+                MessageBox.Show("File not found!");
             else
             {
-                StreamWriter sr = new StreamWriter(path, true, Encoding.UTF8);
-                for (int i = 0; i < lines.Length; ++i)
-                    sr.WriteLine(lines[i]);
+                try
+                {
+                    StreamWriter sr = new StreamWriter(path, true, Encoding.UTF8);
+                    for (int i = 0; i < lines.Length; ++i)
+                        sr.WriteLine(lines[i]);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
             }
 
         }
+        /// <summary>
+        /// Parses data to string 
+        /// </summary>
+        /// <param name="header"> Header of data</param>
+        /// <param name="data"> All other data</param>
+        /// <returns>Array of lines ready for writing </returns>
         private static string[] ParseDateToStringArray(string header, List<Theatre> data)
         {
             string[] lines = new string[data.Count() + 1];
@@ -84,9 +123,9 @@ namespace FileIO
             {
                 for (int k = 0; k < data[i].Values.Length; ++k)
                     if (Theatre.intloc.ContainsKey(k))
-                        lines[i + 1] += "\"" + data[i].IntValues[Theatre.intloc[k]].ToString() + ";\"";
+                        lines[i + 1] += ("\"" + data[i].IntValues[Theatre.intloc[k]].ToString() + ";\"");
                     else
-                        lines[i + 1] += "\"" + data[i].Values[k] + ";\"";
+                        lines[i + 1] += ("\"" + data[i].Values[k] + ";\"");
             }
             return lines;
         }

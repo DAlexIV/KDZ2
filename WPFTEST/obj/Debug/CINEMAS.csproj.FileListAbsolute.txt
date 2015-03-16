@@ -49,3 +49,4 @@ c:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\obj\Debug\WPFTEST_MarkupCompile.cache
 c:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\obj\Debug\WPFTEST.g.resources
 c:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\obj\Debug\WPFTEST.Properties.Resources.resources
 c:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\obj\Debug\CINEMAS.csproj.GenerateResource.Cache
+C:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\bin\Debug\WPFTEST.XML

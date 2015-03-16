@@ -8,28 +8,49 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.ComponentModel;
+using System.IO;
 namespace WPFTEST
 {
+    /// <summary>
+    /// Class for editing data
+    /// </summary>
     class CinemaList
     {
-        private const int ar = 5;
-        private const int dst = 6;
+        private const int ar = 5; // Number of area column
+        private const int dst = 6; // Number of district column
+        // Default column values
         private const string def_area = "All Areas";
         private const string def_dist = "All Districts";
+
+        // All readed data
         private List<Theatre> _origdata = new List<Theatre>();
+        // Filtered and sorted data
         private List<Theatre> _filtered_data = new List<Theatre>();
+        // Data that is actually shown
         private List<Theatre> _shown_data = new List<Theatre>();
+
+        // Sets of areas and districts
         private List<string> _areas;
         private List<string> _districts;
-        string[] spltdDefLine;
 
-        private string _defLine;
-        private DataGrid _datagr;
-        private int _datasize;
+        string[] spltdDefLine; // Splitted line with columns names
+        private string _defLine; // Line with columns names
+
+        private DataGrid _datagr; // Current datagrid table
+        private int _datasize; // Size of _shown_data
+
+        // Sorting indicator, which contains signed number of column
+        // if it's sorted
         private int wassorted;
-        private int N;
+
+        // Data filters
+        // If they aren't exist they equals default values
         public string area_filter;
         public string dist_filter;
+
+        /// <summary>
+        /// Gets size of shown data
+        /// </summary>
         public int GetDatasize
         {
             get
@@ -37,6 +58,10 @@ namespace WPFTEST
                 return _datasize;
             }
         }
+
+        /// <summary>
+        /// Gets list with area set
+        /// </summary>
         public List<string> GetAreas
         {
             get
@@ -44,6 +69,10 @@ namespace WPFTEST
                 return _areas;
             }
         }
+
+        /// <summary>
+        /// Gets list with districts set
+        /// </summary>
         public List<string> GetDistricts
         {
             get
@@ -52,6 +81,10 @@ namespace WPFTEST
 
             }
         }
+
+        /// <summary>
+        /// Gets current datagrid
+        /// </summary>
         public DataGrid GetDataGrid
         {
             get
@@ -60,6 +93,10 @@ namespace WPFTEST
                 return _datagr;
             }
         }
+
+        /// <summary>
+        /// Get original data size
+        /// </summary>
         public int GetMaxSize
         {
             get
@@ -67,13 +104,19 @@ namespace WPFTEST
                 return _origdata.Count();
             }
         }
+        /// <summary>
+        /// Gets data for saving 
+        /// </summary>
         public List<Theatre> GetData
         {
             get
             {
-                return _shown_data;
+                return _filtered_data;
             }
         }
+        /// <summary>
+        /// Gets defline for saving
+        /// </summary>
         public string GetDefLine
         {
             get
@@ -81,18 +124,26 @@ namespace WPFTEST
                 return _defLine;
             }
         }
+        /// <summary>
+        /// Constructs CinemaList
+        /// </summary>
+        /// <param name="datagr"> Datagrid where this list will be shown</param>
+        /// <param name="rawdata"> Data for list</param>
         public CinemaList(DataGrid datagr, List<string> rawdata)
         {
-            this._datagr = datagr;
+            int N;
             List<string> myrd = rawdata.ToList();
+            this._datagr = datagr;
+
             _defLine = rawdata[0];
             spltdDefLine = _defLine.Split(';');
             N = spltdDefLine.Length - 1;
+
             if (N + 1 != 24)
             {
-                MessageBox.Show("Bad file! Try again.");
-                return;
+                throw new FileLoadException("Bad file! Try again.");
             }
+
             myrd.RemoveAt(0);
             for (int i = 0; i < myrd.Count(); ++i)
             {
@@ -105,11 +156,15 @@ namespace WPFTEST
                     MessageBox.Show(i.ToString() + "/n" + ex.Message);
                 }
             }
+
             _filtered_data = _origdata.ToList();
             _shown_data = _origdata.ToList();
             _datasize = _filtered_data.Count();
             SetDict();
         }
+        /// <summary>
+        /// Constructs columns in datagrid
+        /// </summary>
         internal void ConstructColumns()
         {
             for (int i = 0; i < _origdata[0].Values.Length; i++)
@@ -117,13 +172,15 @@ namespace WPFTEST
                 var col = new DataGridTextColumn();
                 if (Theatre.intloc.ContainsKey(i))
                 {
+                    // If value is integer
                     col.Header = spltdDefLine[i];
-                    //Here i bind to the various indices.
+                    // Here i bind to the various indices.
                     var binding = new Binding("IntValues[" + Theatre.intloc[i] + "]");
                     col.Binding = binding;
                 }
                 else
                 {
+                    // If value is string
                     col.Header = spltdDefLine[i];
                     //Here i bind to the various indices.
                     var binding = new Binding("Values[" + i + "]");
@@ -133,18 +190,28 @@ namespace WPFTEST
             }
             _datagr.ItemsSource = _origdata;
         }
+        /// <summary>
+        /// Resizes data to user size
+        /// </summary>
+        /// <param name="n"> User size </param>
         public void ResizeData(int n)
         {
             Theatre[] tmpar = new Theatre[n];
+
             if (n <= _filtered_data.Count())
                 _filtered_data.CopyTo(0, tmpar, 0, n);
             else
                 MessageBox.Show("Go fuck urself!");
+
             _shown_data = tmpar.ToList();
         }
+        /// <summary>
+        /// Sorts filtered data
+        /// </summary>
         public void SortData()
         {
             List<Theatre> srtddata = new List<Theatre>();
+
             for (int i = 0; i < _datagr.Columns.Count(); ++i)
                 if (_datagr.Columns[i].SortDirection != null)
                 {
@@ -178,20 +245,24 @@ namespace WPFTEST
             if (srtddata.Any())
                 _filtered_data = srtddata;
         }
+        /// <summary>
+        /// Checks filter and sorting
+        /// </summary>
         public void UpdateData()
         {
-            //if (area_filter == def_area)
-            // MessageBox.Show("You can't resize ")
-                if (area_filter != null && area_filter != def_area)
-                    ReduceDataBy(area_filter, ar);
-                if (dist_filter != null && dist_filter != def_dist)
-                    ReduceDataBy(dist_filter, dst);
+            if (area_filter != null && area_filter != def_area)
+                ReduceDataBy(area_filter, ar);
+            if (dist_filter != null && dist_filter != def_dist)
+                ReduceDataBy(dist_filter, dst);
             if (wassorted != 0)
                 _datagr.Columns[Math.Abs(wassorted)].SortDirection =
                     (wassorted > 0) ? ListSortDirection.Ascending : ListSortDirection.Descending;
             wassorted = 0;
             _datagr.ItemsSource = _shown_data;
         }
+        /// <summary>
+        /// Sets set of areas and districts
+        /// </summary>
         private void SetDict()
         {
             List<string> newares = new List<string>();
@@ -209,8 +280,13 @@ namespace WPFTEST
             newdistricts.Sort();
             _areas = newares;
             _districts = newdistricts;
-            
+
         }
+        /// <summary>
+        /// Filters data
+        /// </summary>
+        /// <param name="line"> Given filter</param>
+        /// <param name="col"> Number of column for filtering </param>
         private void ReduceDataBy(string line, int col)
         {
 
@@ -228,6 +304,9 @@ namespace WPFTEST
             else
                 throw new Exception("There is no such lines");
         }
+        /// <summary>
+        /// Complete reset
+        /// </summary>
         public void SetToDef()
         {
             _filtered_data = _origdata;

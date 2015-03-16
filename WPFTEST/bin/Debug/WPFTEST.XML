@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WPFTEST</name>
+    </assembly>
+    <members>
+        <member name="T:WPFTEST.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:WPFTEST.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:WPFTEST.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="M:WPFTEST.CinemaList.#ctor(System.Windows.Controls.DataGrid,System.Collections.Generic.List{System.String})">
+            <summary>
+            Constructs CinemaList
+            </summary>
+            <param name="datagr"> Datagrid where this list will be shown</param>
+            <param name="rawdata"> Data for list</param>
+        </member>
+        <member name="M:WPFTEST.CinemaList.ConstructColumns">
+            <summary>
+            Constructs columns in datagrid
+            </summary>
+        </member>
+        <member name="M:WPFTEST.CinemaList.ResizeData(System.Int32)">
+            <summary>
+            Resizes data to user size
+            </summary>
+            <param name="n"> User size </param>
+        </member>
+        <member name="M:WPFTEST.CinemaList.SortData">
+            <summary>
+            Sorts filtered data
+            </summary>
+        </member>
+        <member name="M:WPFTEST.CinemaList.UpdateData">
+            <summary>
+            Checks filter and sorting
+            </summary>
+        </member>
+        <member name="M:WPFTEST.CinemaList.SetDict">
+            <summary>
+            Sets set of areas and districts
+            </summary>
+        </member>
+        <member name="M:WPFTEST.CinemaList.ReduceDataBy(System.String,System.Int32)">
+            <summary>
+            Filters data
+            </summary>
+            <param name="line"> Given filter</param>
+            <param name="col"> Number of column for filtering </param>
+        </member>
+        <member name="M:WPFTEST.CinemaList.SetToDef">
+            <summary>
+            Complete reset
+            </summary>
+        </member>
+        <member name="P:WPFTEST.CinemaList.GetDatasize">
+            <summary>
+            Gets size of shown data
+            </summary>
+        </member>
+        <member name="P:WPFTEST.CinemaList.GetAreas">
+            <summary>
+            Gets list with area set
+            </summary>
+        </member>
+        <member name="P:WPFTEST.CinemaList.GetDistricts">
+            <summary>
+            Gets list with districts set
+            </summary>
+        </member>
+        <member name="P:WPFTEST.CinemaList.GetDataGrid">
+            <summary>
+            Gets current datagrid
+            </summary>
+        </member>
+        <member name="P:WPFTEST.CinemaList.GetMaxSize">
+            <summary>
+            Get original data size
+            </summary>
+        </member>
+        <member name="P:WPFTEST.CinemaList.GetData">
+            <summary>
+            Gets data for saving 
+            </summary>
+        </member>
+        <member name="P:WPFTEST.CinemaList.GetDefLine">
+            <summary>
+            Gets defline for saving
+            </summary>
+        </member>
+        <member name="T:WPFTEST.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:WPFTEST.MainWindow.#ctor">
+            <summary>
+            Initializes all complonents in window
+            to default values
+            </summary>
+        </member>
+        <member name="M:WPFTEST.MainWindow.OpenFileHandler(System.Object,System.EventArgs)">
+            <summary>
+            Opens csv-file
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.SaveToNewFileHandler(System.Object,System.EventArgs)">
+            <summary>
+            Saves to new or existing file
+            (Rewrites it)
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.AppendFileHandler(System.Object,System.EventArgs)">
+            <summary>
+            Appends data to existing file
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.bar_ValueChanged(System.Object,System.Windows.RoutedPropertyChangedEventArgs{System.Double})">
+            <summary>
+            Changes number of lines shown
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.TextBox_TextEntered(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Updates shown number of line with text
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.UnlockAll">
+            <summary>
+            Unlock all elements
+            when file is opened
+            </summary>
+        </member>
+        <member name="M:WPFTEST.MainWindow.SelectionChangedAr(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Filters data for every changed area selection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.SelectionChangedDst(System.Object,System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Filters data for every changed district selection
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.Button_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Shows all the data
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.SetDefCombo">
+            <summary>
+            Sets all selected values to default
+            </summary>
+        </member>
+        <member name="M:WPFTEST.MainWindow.Exit(System.Object,System.EventArgs)">
+            <summary>
+            Exits from application
+            </summary>
+            <param name="obj"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.tbKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Enter handler for textbox
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WPFTEST.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:WPFTEST.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:WPFTEST.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:WPFTEST.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
