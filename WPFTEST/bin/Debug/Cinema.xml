@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cinema</name>
+    </assembly>
+    <members>
+        <member name="T:Cinema.Contacts">
+            <summary>
+            Strores contacts 
+            </summary>
+        </member>
+        <member name="M:Cinema.Contacts.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Sets data to _cont
+            </summary>
+            <param name="stck"> List of string data </param>
+        </member>
+        <member name="P:Cinema.Contacts.GetCont">
+            <summary>
+            Access to _cont
+            </summary>
+        </member>
+        <member name="T:Cinema.Theatre">
+            <summary>
+            Class for one concrete cinema
+            Stores data and parse methods
+            </summary>
+        </member>
+        <member name="F:Cinema.Theatre.intloc">
+            <summary>
+            Dictionary that determines int values in data
+            </summary>
+        </member>
+        <member name="F:Cinema.Theatre.toCont">
+            <summary>
+            List contains contact data columns 
+            </summary>
+        </member>
+        <member name="M:Cinema.Theatre.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructs cinema class
+            </summary>
+            <param name="line"> Raw string to construct</param>
+            <param name="N"> Number of columns </param>
+        </member>
+        <member name="M:Cinema.Theatre.ParseLine(System.String[])">
+            <summary>
+            Parses line to int and string arrays
+            </summary>
+            <param name="cur"></param>
+        </member>
+    </members>
+</doc>

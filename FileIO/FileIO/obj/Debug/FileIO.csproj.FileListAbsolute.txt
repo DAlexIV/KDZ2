@@ -17,3 +17,12 @@ c:\Study\C#\WPFTEST - Copy\KDZ2\FileIO\FileIO\bin\Debug\Cinema.pdb
 c:\Study\C#\WPFTEST - Copy\KDZ2\FileIO\FileIO\obj\Debug\FileIO.csprojResolveAssemblyReference.cache
 c:\Study\C#\WPFTEST - Copy\KDZ2\FileIO\FileIO\obj\Debug\FileIO.dll
 c:\Study\C#\WPFTEST - Copy\KDZ2\FileIO\FileIO\obj\Debug\FileIO.pdb
+c:\Work\Code\Kdz2\FileIO\FileIO\bin\Debug\FileIO.dll
+c:\Work\Code\Kdz2\FileIO\FileIO\bin\Debug\FileIO.pdb
+c:\Work\Code\Kdz2\FileIO\FileIO\bin\Debug\Cinema.dll
+c:\Work\Code\Kdz2\FileIO\FileIO\bin\Debug\Cinema.pdb
+c:\Work\Code\Kdz2\FileIO\FileIO\obj\Debug\FileIO.csprojResolveAssemblyReference.cache
+c:\Work\Code\Kdz2\FileIO\FileIO\obj\Debug\FileIO.dll
+c:\Work\Code\Kdz2\FileIO\FileIO\obj\Debug\FileIO.pdb
+c:\Work\Code\Kdz2\FileIO\FileIO\bin\Debug\FileIO.XML
+c:\Work\Code\Kdz2\FileIO\FileIO\bin\Debug\Cinema.xml

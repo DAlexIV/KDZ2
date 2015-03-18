@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FileIO</name>
+    </assembly>
+    <members>
+        <member name="T:FileIO.MYIO">
+            <summary>
+            Contains static methods for input and output
+            </summary>
+        </member>
+        <member name="M:FileIO.MYIO.OpenCSV">
+            <summary>
+            Opens csv-file
+            </summary>
+            <returns>Path to file</returns>
+        </member>
+        <member name="M:FileIO.MYIO.ReadCSV(System.String)">
+            <summary>
+            Reads data from csv-file
+            </summary>
+            <param name="path"> Path for reading </param>
+            <returns> Collection of lines</returns>
+        </member>
+        <member name="M:FileIO.MYIO.SaveCSV">
+            <summary>
+            Saves csv-file
+            </summary>
+            <returns> Path for saving </returns>
+        </member>
+        <member name="M:FileIO.MYIO.WriteToFile(System.String,System.Collections.Generic.List{Cinema.Theatre},System.String)">
+            <summary>
+            Writes data and header to file
+            </summary>
+            <param name="header"> First line </param>
+            <param name="data"> All other lines </param>
+            <param name="path"> Path to write </param>
+        </member>
+        <member name="M:FileIO.MYIO.AppendToFile(System.String,System.Collections.Generic.List{Cinema.Theatre},System.String)">
+            <summary>
+            Appends data and header to file
+            </summary>
+            <param name="header"> Header line </param>
+            <param name="data"> Data lines </param>
+            <param name="path"> Path to write </param>
+        </member>
+        <member name="M:FileIO.MYIO.ParseDateToStringArray(System.String,System.Collections.Generic.List{Cinema.Theatre})">
+            <summary>
+            Parses data to string 
+            </summary>
+            <param name="header"> Header of data</param>
+            <param name="data"> All other data</param>
+            <returns>Array of lines ready for writing </returns>
+        </member>
+    </members>
+</doc>

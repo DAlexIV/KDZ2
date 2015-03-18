@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Cinema
 {
+    /// <summary>
+    /// Class for one concrete cinema
+    /// Stores data and parse methods
+    /// </summary>
     public class Theatre
     {
         /// <summary>

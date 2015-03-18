@@ -22,6 +22,11 @@
             Application Entry Point.
             </summary>
         </member>
+        <member name="T:WPFTEST.CinemaList">
+            <summary>
+            Class for editing data
+            </summary>
+        </member>
         <member name="M:WPFTEST.CinemaList.#ctor(System.Windows.Controls.DataGrid,System.Collections.Generic.List{System.String})">
             <summary>
             Constructs CinemaList

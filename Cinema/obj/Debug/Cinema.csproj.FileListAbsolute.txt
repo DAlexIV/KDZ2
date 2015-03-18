@@ -13,3 +13,9 @@ C:\Study\C#\WPFTEST - Copy\KDZ2\Cinema\bin\Debug\Cinema.pdb
 C:\Study\C#\WPFTEST - Copy\KDZ2\Cinema\obj\Debug\Cinema.csprojResolveAssemblyReference.cache
 C:\Study\C#\WPFTEST - Copy\KDZ2\Cinema\obj\Debug\Cinema.dll
 C:\Study\C#\WPFTEST - Copy\KDZ2\Cinema\obj\Debug\Cinema.pdb
+c:\Work\Code\Kdz2\Cinema\bin\Debug\Cinema.dll
+c:\Work\Code\Kdz2\Cinema\bin\Debug\Cinema.pdb
+c:\Work\Code\Kdz2\Cinema\obj\Debug\Cinema.csprojResolveAssemblyReference.cache
+c:\Work\Code\Kdz2\Cinema\obj\Debug\Cinema.dll
+c:\Work\Code\Kdz2\Cinema\obj\Debug\Cinema.pdb
+c:\Work\Code\Kdz2\Cinema\bin\Debug\Cinema.XML

@@ -8,6 +8,9 @@ using System.Windows;
 using Cinema;
 namespace FileIO
 {
+    /// <summary>
+    /// Contains static methods for input and output
+    /// </summary>
     public static class MYIO
     {
         /// <summary>

@@ -50,3 +50,27 @@ c:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\obj\Debug\WPFTEST.g.resources
 c:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\obj\Debug\WPFTEST.Properties.Resources.resources
 c:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\obj\Debug\CINEMAS.csproj.GenerateResource.Cache
 C:\Study\C#\WPFTEST - Copy\KDZ2\WPFTEST\bin\Debug\WPFTEST.XML
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\WPFTEST.exe.config
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\WPFTEST.XML
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\WPFTEST.exe
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\WPFTEST.pdb
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\WPFTEST.exe
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\WPFTEST.pdb
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\Cinema.dll
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\FileIO.dll
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\Cinema.pdb
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\FileIO.pdb
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\CINEMAS.csprojResolveAssemblyReference.cache
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\MainWindow.baml
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\MainWindow.g.cs
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\App.g.cs
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\WPFTEST_MarkupCompile.cache
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\WPFTEST.g.resources
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\WPFTEST.Properties.Resources.resources
+c:\Work\Code\Kdz2\WPFTEST\obj\Debug\CINEMAS.csproj.GenerateResource.Cache
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\Cinema.xml
+c:\Work\Code\Kdz2\WPFTEST\bin\Debug\FileIO.xml
+c:\Downloads\Kdz2\Kdz2\WPFTEST\bin\Debug\WPFTEST.exe.config
+c:\Downloads\Kdz2\Kdz2\WPFTEST\bin\Debug\WPFTEST.XML
+c:\Downloads\Kdz2\Kdz2\WPFTEST\obj\Debug\WPFTEST.exe
+c:\Downloads\Kdz2\Kdz2\WPFTEST\obj\Debug\WPFTEST.pdb
